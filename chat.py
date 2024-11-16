@@ -1,11 +1,11 @@
 import nltk
 
 # Téléchargement des ressources nécessaires
-nltk.download('punkt')         # Pour la tokenisation des phrases
-nltk.download('stopwords')         # Pour la liste des mots vides
-nltk.download('wordnet')           # Pour la lemmatisation
-nltk.download('omw-1.4')           # Pour les données supplémentaires de WordNet
-nltk.download('averaged_perceptron_tagger')
+nltk.download('punkt', download_dir='nltk_data')
+nltk.download('stopwords', download_dir='nltk_data')
+nltk.download('wordnet', download_dir='nltk_data')
+nltk.download('omw-1.4', download_dir='nltk_data')
+nltk.download('averaged_perceptron_tagger', download_dir='nltk_data')
 
 from nltk.tokenize import word_tokenize, sent_tokenize
 
