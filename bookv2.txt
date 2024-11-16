@@ -1,7 +1,7 @@
 
 
 
-système de recommandation musicale
+système de recommandation musicale :
 Les systèmes de recommandation ont pour objectif de filtrer, d’adapter et de proposer des items pertinents à l’utilisateur, Ils ont été étudiés dans de nombreux domaines : la recherche d’informations, le e-commerce, l’exploitation des usages du Web, la e-santé, et bien d’autres. 
 
 Recommandation: 
