@@ -13,7 +13,8 @@ from nltk.corpus import stopwords
 
 from nltk.stem import WordNetLemmatizer
 
-import string
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
 import streamlit as st
 
@@ -42,38 +43,28 @@ def preprocess(sentence) :
 
 corpus = [preprocess(sentence) for sentence in sentences]
 
+# Construction d'une matrice TF-IDF pour les phrases
+vectorizer = TfidfVectorizer()
+tfidf_matrix = vectorizer.fit_transform([' '.join(sentence) for sentence in corpus])
 
-# Définir une fonction pour trouver la phrase la plus pertinente en fonction d'une requête
+def get_most_relevant_sentence_tfidf(query):
+    # Transformer la requête en vecteur TF-IDF
+    query_vec = vectorizer.transform([' '.join(preprocess(query))])
 
-def get_most_relevant_sentence(query) :
+    # Calculer les similarités cosinus entre la requête et les phrases
+    similarities = cosine_similarity(query_vec, tfidf_matrix)
 
-    # Prétraitement de la requête
+    # Trouver l'indice de la phrase la plus pertinente
+    idx = similarities.argmax()
 
-    query = preprocess(query)
-
-    # Calcule la similarité entre la requête et chaque phrase du texte
-
-    max_similarité = 0
-
-    most_relevant_sentence = ""
-
-    for sentence in corpus:
-
-        similarité = len(set(query).intersection(sentence)) / float(len(set(query).union(sentence)))
-
-        if similarité > max_similarité:
-
-            max_similarité = similarité
-
-            most_relevant_sentence = " ; ".join(sentence)
-
-    return most_relevant_sentence
+    # Retourner la phrase correspondante
+    return ' '.join(corpus[idx])
 
 def chatbot(question) :
 
     # Trouver la phrase la plus pertinente
 
-    most_relevant_sentence = get_most_relevant_sentence(question)
+    most_relevant_sentence = get_most_relevant_sentence_tfidf(question)
 
     # Retourne la réponse
 
