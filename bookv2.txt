@@ -1,0 +1,52 @@
+
+
+
+Système de recommandation musicale
+Les systèmes de recommandation ont pour objectif de filtrer, d’adapter et de proposer des items pertinents à l’utilisateur, Ils ont été étudiés dans de nombreux domaines : la recherche d’informations, le e-commerce, l’exploitation des usages du Web, la e-santé, et bien d’autres. 
+
+Recommandation: 
+Il existe plusieurs définitions d’un système de recommandation à cause de la diversité des classifications proposées pour ces systèmes, mais la plus générale est celle de Robin Burke en 2002 : «Des systèmes capables de fournir des recommandations personnalisées permettant de guider l’utilisateur vers des ressources intéressantes et utiles au sein d’un espace de données important »
+
+Un système de recommandation est constitué de trois entités principales :  
+L’usager : l’utilisateur de système, Il donne son opinion sur différents items et reçoit les nouvelles recommandations du système.  
+L’item : ce que le système suggère à l’utilisateur  
+Note : c’est une préférence exprimée par un usager pour un certain item (généralement de 1 à 5), Il peut s’agir de la musique à écouter, du produit à acheter, du film à regarder, de l’article en ligne à lire etc.
+
+
+Objectif des systèmes de recommandation sont :  
+Améliorer l’expérience de l’utilisateur; 
+Augmenter continuellement les performances clés (durée de visionnement, temps de lecture, panier moyen, raccourcissement des délais de recherche de contenus/produits, etc.)  
+Gérer un volume croissant de données impossible à traiter manuellement;
+Analyser rigoureusement les données pour des recommandations personnalisées pertinentes;
+Automatiser le filtrage des données. 
+
+Bien  que  les  algorithmes  d’apprentissage  automatique  jouent  un  rôle  primordial  dans  les systèmes de recommandation, il faut reconnaitre l’apport important de différentes approches de filtrage  de  l’information (Fournier S’niehotta  et  al.,  s. d.;  Mokhtar Annaba,  2016) Trois appoches sont utilisées à savoir (Jannach et al., 2010b) : le filtrage collaboratif (collaborative filtering en anglais), le filtrage basé sur le contenu (Cantent based) ou le profiling et le filtrage hybride.
+
+Le filtrage collaboratif:
+Le  filtrage  collaboratif«Dis-moi ce  qui    intéresse  plus  la communauté.» vise  la convergence de profils de plusieurs utilisateurs  sur un contenu quelconque afin d’en proposer à l’utilisateur. L'homme s’assimile tout  le temps à  ces paires du  groupe  dont il  fait partie.
+
+Le filtrage basé sur le contenu (profiling):
+Comme son nom l’indique, le système de filtrage à base de contenu adhère au principe selon lequel « Montre- moi plus ce qui ressemble à mes préférences » pour recommander des items à un utilisateur.
+
+Le filtrage hybride :
+Ce mécanisme de filtrage consiste à élaguer le dualisme de deux approches précédentes, afin d’optimiser  le  rendu.
+
+Systèmes de recommandation
+Des plateformes comme Netflix ou Spotify exploitent la puissance de l'apprentissage par similarité pour personnaliser l'expérience utilisateur. En comparant les habitudes de visionnage ou d'écoute d'un utilisateur à celles d'autres utilisateurs, ces plateformes peuvent suggérer du contenu qui correspond aux préférences individuelles. Cette personnalisation conduit à une augmentation de l'engagement et de la satisfaction des utilisateurs, car ces derniers sont plus susceptibles de rester sur une plateforme qui propose régulièrement du contenu qu'ils apprécient;
+La mise en correspondance des produits dans le commerce électronique
+Les géants du commerce électronique comme Amazon et eBay utilisent l'apprentissage par similarité pour regrouper des produits similaires ou suggérer des alternatives. Lorsqu'un utilisateur consulte un article particulier, le système peut lui recommander des produits présentant des attributs similaires ou appartenant à des catégories connexes, facilitant ainsi la découverte de produits et augmentant potentiellement les ventes.
+
+Lecture des données
+Dans cette phase, l'objectif est de lire le jeu de données Spotify et d'explorer son contenu. Cette étape est cruciale pour comprendre la structure des données et les préparer pour les phases suivantes du projet;
+Exploratory Data Analysis
+Dans cette phase, vous effectuerez une analyse exploratoire des données sur l'ensemble de données Spotify. Cette analyse vous aidera à comprendre les tendances des caractéristiques sonores au fil des décennies, à examiner la popularité et les caractéristiques des principaux genres et artistes, et à générer des nuages de mots pour visualiser les genres et les artistes présents dans l'ensemble de données.
+
+Clustering Phase
+Dans cette phase, nous utiliserons des techniques de regroupement pour grouper les genres et les chansons en fonction de leurs caractéristiques. Le regroupement permet de découvrir des modèles et des similitudes au sein de l'ensemble de données, ce qui nous permet de mieux comprendre la structure des données musicales.
+
+Modeling (Recommendation System)
+Dans cette phase, nous utiliserons l'ensemble de données Spotify et mettrons en place un système de recommandation utilisant les caractéristiques des chansons. Nous utiliserons la bibliothèque Spotipy pour accéder à l'API Spotify et récupérer des détails supplémentaires sur les chansons. Le système de recommandation calculera la similarité entre les chansons sur la base de leurs caractéristiques numériques et recommandera les 10 chansons les plus similaires à l'utilisateur.
+
+
+
+
